@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin-top: 100px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+}
+
+.flip-card-front {
+  background-image: linear-gradient(
+  0deg,
+  hsl(315deg 88% 57%) 0%,
+  hsl(311deg 77% 60%) 18%,
+  hsl(304deg 65% 61%) 26%,
+  hsl(293deg 62% 64%) 33%,
+  hsl(281deg 68% 68%) 39%,
+  hsl(267deg 76% 72%) 44%,
+  hsl(251deg 87% 76%) 50%,
+  hsl(255deg 45% 62%) 56%,
+  hsl(260deg 26% 49%) 61%,
+  hsl(268deg 25% 37%) 67%,
+  hsl(283deg 24% 25%) 74%,
+  hsl(316deg 26% 15%) 82%,
+  hsl(0deg 75% 6%) 100%
+);
+}
+
+.flip-card-front img {
+  width: 250px;
+  height: 200px;
+  margin-top: 3rem;
+}
+
+.flip-card-back {
+  background-image: linear-gradient(
+  90deg,
+  hsl(315deg 88% 57%) 2%,
+  hsl(311deg 77% 60%) 16%,
+  hsl(304deg 65% 61%) 23%,
+  hsl(293deg 62% 64%) 30%,
+  hsl(281deg 68% 68%) 36%,
+  hsl(267deg 76% 72%) 41%,
+  hsl(251deg 87% 76%) 47%,
+  hsl(255deg 45% 62%) 53%,
+  hsl(260deg 26% 49%) 59%,
+  hsl(268deg 25% 37%) 66%,
+  hsl(283deg 24% 25%) 73%,
+  hsl(316deg 26% 15%) 82%,
+  hsl(0deg 75% 6%) 100%
+);
+  color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back img {
+  width: 175px;
+  height: 140px;
+  margin-top: 3rem;
+}
+
+.flip-card-back h3 {
+  margin-bottom: 0.3rem;
+}
+
+.flip-card-back h1 {
+  margin: 0;
+}
